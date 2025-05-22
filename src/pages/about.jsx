@@ -1,4 +1,4 @@
-import aboutImg from "../assets/about.jpg";
+import aboutImg from "../assets/aboutImg.JPG";
 import img1 from "../assets/CEO.jpg";
 import img2 from "../assets/Subomi.jpg";
 import img3 from "../assets/CEO2.jpg";
