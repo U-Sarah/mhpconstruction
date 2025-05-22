@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+
+html{
+  scroll-behavior: smooth;
+
+}
+body{
+  font-family: "PP Neue Montreal", ;
+  overflow-x: hidden;
+}
+h1 {
+  /* font-size: 48px; */
+  font-family: "Montserrat", sans-serif;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+p{
+  font-family: "PP Neue Montreal", sans-serif;
+
+}
+button {
+  font-family: "PP Neue Montreal", sans-serif;
+  font-weight: 600;
+  /* font-size: 16px; */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
