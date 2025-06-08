@@ -43,28 +43,47 @@ const NavBar = () => {
           </button>
           {/* mobile menu */}
           {isMenuOpen && (
-            <div className="absolute top-16 right-4 bg-white rounded-lg shadow-lg mt-3 p-3 z-50">
-              <ul className="text-[#0F2917]">
-                <li>
-                  <a href="#project" onClick={toggleMenu}>
-                    Projects
-                  </a>
-                </li>
-                <li>
-                  <a href="#services" onClick={toggleMenu}>
-                    Services
-                  </a>
-                </li>
-                <Link to="/about" onClick={toggleMenu}>
-                  About
-                </Link>
-                <li>
-                  <a href="#blogs" onClick={toggleMenu}>
-                    Blog
-                  </a>
-                </li>
+            <div className="absolute top-16 right-4 bg-white rounded-lg shadow-lg mt-3 p-5 z-50">
+              <ul className="text-[#0F2917] flex flex-col gap-3">
+                {isHome ? (
+                  <>
+                    <li>
+                      <a href="#project" onClick={toggleMenu}>
+                        Projects
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#services" onClick={toggleMenu}>
+                        Services
+                      </a>
+                    </li>
+                    <li>
+                      <Link to="/about" onClick={toggleMenu}>
+                        About us
+                      </Link>
+                    </li>
+                    <li>
+                      <a href="#blogs" onClick={toggleMenu}>
+                        Blog
+                      </a>
+                    </li>
+                  </>
+                ) : (
+                  <>
+                    <li>
+                      <Link to="/" onClick={toggleMenu}>
+                        Home
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/about" onClick={toggleMenu}>
+                        About us
+                      </Link>
+                    </li>
+                  </>
+                )}
               </ul>
-              <button className="bg-[#13351D] text-white px-4 py-2 rounded-lg hover:bg-[#BBC7BD] hover:text-[#0F2917] flex items-center gap-2">
+              <button className="bg-[#13351D] text-white px-8 py-2 rounded-lg mt-4 hover:bg-[#BBC7BD] hover:text-[#0F2917] flex  gap-2">
                 <a href="https://wa.me/2349036965601" className="text-2xl">
                   <FiPhone />
                 </a>
@@ -76,16 +95,34 @@ const NavBar = () => {
       ) : (
         <>
           <ul className="flex gap-5 text-[#0F2917] font-semibold">
-            <li>
-              <a href="#project">Projects</a>
-            </li>
-            <li>
-              <a href="#services">Services</a>
-            </li>
-            <Link to="/about">About us</Link>
-            <li>
-              <a href="#blog">Blog</a>
-            </li>
+            {isHome ? (
+              <>
+                <li>
+                  <a href="#project">Projects</a>
+                </li>
+                <li>
+                  <a href="#services">Services</a>
+                </li>
+                <li>
+                  <a href="#testimonials">Testimonials</a>
+                </li>
+                <li>
+                  <Link to="/about">About us</Link>
+                </li>
+                <li>
+                  <a href="#blogs">Blogs</a>
+                </li>
+              </>
+            ) : (
+              <>
+                <li>
+                  <Link to="/">Home</Link>
+                </li>
+                <li>
+                  <Link to="/about">About us</Link>
+                </li>
+              </>
+            )}
           </ul>
           <button className="flex items-center gap-2 bg-[#13351D] text-white px-3 py-2 rounded-lg hover:bg-[#BBC7BD] hover:text-[#0F2917]">
             <span>

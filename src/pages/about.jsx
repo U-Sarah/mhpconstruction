@@ -1,4 +1,4 @@
-import aboutImg from "../assets/aboutImg.JPG";
+import AboutImage from "../assets/aboutImg.JPG";
 import img1 from "../assets/CEO.jpg";
 import img2 from "../assets/Subomi.jpg";
 import img3 from "../assets/CEO2.jpg";
@@ -37,7 +37,7 @@ const About = () => {
   return (
     <section className="flex flex-col items-center justify-center text-center xl:mt-10 xl:py-26 w-full overflow-x-hidden">
       <img
-        src={aboutImg}
+        src={AboutImage}
         alt="About MHP Construction"
         width={800}
         height={500}

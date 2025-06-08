@@ -31,7 +31,7 @@ const Services = () => {
       <div className="xl:grid xl:grid-cols-2 gap-10">
         <div className=" xl:rounded-xl xl:shadow-xl w-full max-w-[380px] xl:px-5 xl:py-5">
           <h3 className="text-[#0F2917] xl:text-xl font-semibold max-xl:font-bold max-xl:mb-2">
-            Elite Construction Services
+            {headings[0]}
           </h3>
           <p className="text-md text-[#3F5445] leading-6.5 xl:tracking-wider max-xl:leading-6.5 max-xl:w-[380px]">
             {services[0]}
@@ -39,7 +39,7 @@ const Services = () => {
         </div>
         <div className=" xl:rounded-xl xl:shadow-xl w-full max-w-[450px] xl:p-5 max-xl:mt-3">
           <h3 className="text-[#0F2917] xl:text-xl font-semibold max-xl:font-bold max-xl:mb-2">
-            Institutional Property Management
+            {headings[1]}
           </h3>
           <p className="text-md text-[#3F5445] leading-6.5 xl:tracking-wider xl:w-[330px] max-xl:w-[380px]">
             {services[1]}
@@ -47,7 +47,7 @@ const Services = () => {
         </div>
         <div className=" xl:rounded-xl xl:shadow-xl w-full max-w-[400px] xl:px-5 xl:py-5">
           <h3 className="text-[#0F2917] xl:text-xl font-semibold max-xl:font-bold max-xl:mb-2 max-xl:mt-3">
-            Transformation and Modernization
+            {headings[2]}
           </h3>
           <p className="text-md text-[#3F5445] xl:tracking-wider leading-6.5 xl:w-[330px]">
             {services[2]}
@@ -55,7 +55,7 @@ const Services = () => {
         </div>
         <div className=" xl:rounded-xl xl:shadow-xl w-full max-w-[400px] xl:px-5 xl:py-5">
           <h3 className="text-[#0F2917] xl:text-xl font-semibold max-xl:font-bold max-xl:mb-2 max-xl:mt-3">
-            Sustainable Developments
+            {headings[3]}
           </h3>
           <p className="text-md text-[#3F5445] xl:tracking-wider leading-6.5 xl:w-[330px]">
             {services[3]}

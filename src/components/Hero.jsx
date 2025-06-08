@@ -27,8 +27,6 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, [isMobile]);
 
-  //   const imageToShow = isMobile ? img1 : images[currentImage];
-
   // Mobile view
   if (isMobile) {
     return (

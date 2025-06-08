@@ -52,7 +52,7 @@ const Projects = () => {
       </div>
       {/* <button className=""> */}
       <a
-        href="#projects"
+        href=""
         className="flex bg-white gap-2 border px-2 py-1 rounded-xl mt-4 w-[150px] text-[#0F2917]"
         onClick={handleClick}
       >
@@ -61,7 +61,7 @@ const Projects = () => {
           <IoIosArrowForward />
         </span>
       </a>
-      {/* </button> */}
+      
     </section>
   );
 };

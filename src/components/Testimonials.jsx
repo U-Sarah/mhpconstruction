@@ -20,11 +20,12 @@ const Testimonials = () => {
 
   return (
     <motion.section
+    id="testimonials"
       className="xl:p-26 mt-20 max-xl:p-3"
-      // initial={{ y: 100, opacity: 0 }}
-      // whileInView={{ y: 0, opacity: 1 }}
-      // transition={{ duration: 0.6 }}
-      // viewport={{ once: true, amount: 0.3 }}
+      initial={{ y: 100, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true, amount: 0.3 }}
     >
       <p className="text-[#B4A734] text-md mb-3">Testimonials</p>
       <h1 className="xl:text-4xl font-semibold text-[#0F2917] mb-5 max-xl:text-2xl">
