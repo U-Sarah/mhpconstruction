@@ -6,28 +6,6 @@ import Services from "./components/Services";
 import Testimonials from "./components/Testimonials";
 import BlogList from "./components/BlogList";
 
-// const App = () => {
-//   return (
-//     <div className="relative">
-//       {/*  Only on mobile: shared background for NavBar + Hero */}
-//       <div className="xl:hidden relative bg-[url('/src/assets/image1.jpg')] bg-cover bg-center">
-//         {/* Overlay */}
-//         <div className="absolute inset-0 bg-black/40 z-0" />
-
-//         {/* Content with NavBar + Hero */}
-//         <div className="relative z-10">
-//           <NavBar isHome={true} />
-//           <Hero />
-//         </div>
-//       </div>
-
-//       {/* Other sections that should not have the background image */}
-//       <Projects />
-//       <Services />
-//       <Testimonials />
-//       <BlogList />
-//     </div>
-//   );
 const App = () => {
   return (
     <div className="bg-white overflow-x-hidden">
