@@ -23,7 +23,7 @@ const AllProjects = () => {
       }
     };
     fetchProjects();
-  }, []);
+  }, [baseURL]);
   const openModal = (project) => {
     setModalOpen(true);
     setSelectedProject(project);
