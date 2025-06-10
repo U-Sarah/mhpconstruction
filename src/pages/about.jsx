@@ -1,13 +1,11 @@
-import aboutImg from "../assets/aboutImg.JPG"
+import aboutImg from "../assets/aboutImg.JPG";
 import img1 from "../assets/CEO.jpg";
 import img2 from "../assets/Subomi.jpg";
 import img3 from "../assets/CEO2.jpg";
 
 const About = () => {
   const aboutTexts = [
-    "With a legacy spanning over a decade, MHP Construction has established itself as the premier partner high-value real estate development. Our portfolio of distinguished residential, commercial and industrial projects stands testament of our upcompromising standards.",
-    "Yet Our true differentiation lies beyond completion certificates. Through our instittional-grade property management division, we protect and enhance clients investments with military precison- because exceptional buildings deserve exceptional stewardship",
-    "📍 Global Reach | Local Expertise Headquatered in Lagos, serving clients internationally with regional offices in Lagos.",
+    "Midhousepro Limited has been around for over a decade contributing its quota to the real estate industry both in construction, post construction, interior decoration through helping families achieve their dream home. We are passionate about what our craft, we take pride in our team of Architects, Geologist, Structural and Engineers working round the clock. From the moment you contact us we assign a team to your project both in customer service relation for prompt communication and the building process as a whole. The CEO specifically handles every client to ensure all their concerns and questions are being attended to.",
   ];
   const headings = [
     "Unassailable Integrity",

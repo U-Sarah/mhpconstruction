@@ -2,16 +2,16 @@ import { motion } from "framer-motion";
 
 const Services = () => {
   const services = [
-    "From ground-up residential estates to commercial landmarks, we actualize visions through cutting-edge architectural design, meticulous engineering execution, premium material selection, and rigorous quality assurance protocols.",
-    "Our white-glove management preserves asset value through predictive maintenance systems, tenant relationship optimization, financial performance analytics, and compliance and risk mitigation.",
-    "Breathe new life into existing assets with our strategic renovation planning, luxury finish upgrades, functional space reengineering, and value-engineering expertise.",
-    "Pioneering responsible construction via LEED-certified building practices, energy performance engineering, circular material sourcing, and carbon footprint reduction strategies.",
+    "Our key focus is construction, we know your space means a lot to you and we handle it with care to construct and handle your project. We follow the regulated standard from the approved government agencies. Both family home be it Bungalow, Duplex, Terraces, Apartments, Hotel, shopping Mall construction we have you covered. Our team of Geologist, Engineers and Manson's are ready to handle your project and deliver it at record time.",
+    "We renovate your home and office space and bring It back to life; we give you the premium standard of luxury while working on a budget.",
+    "Our team of interior decorators are certified and they have an eye for great designs and color combination, every space tells a story, be it kids room or the kitchen where the magic happens, we make your home beautiful and live a lasting impression for you.",
+    "We help our client look for land in a prime location land that has a good title and good soil and within their budget. It may take time but we are very meticulous about our client preference. We go extra mile in verifying all documentations both from the family history, government verification and also at the Surveyor general’s office for proper search. Our client trusts us to take off the burden off them and get them the best land that fits whatever project they want to embark on the proposed land.",
   ];
   const headings = [
-    "Elite Construction Services",
-    "Institutional Property Management",
-    "Transformation and Modernization",
-    "Sustainable Developments",
+    "Construction (Residential and Commercial)",
+    "Home Renovation",
+    "Home Interior",
+    "Land purchase and documentation",
   ];
   return (
     <motion.section
@@ -28,16 +28,16 @@ const Services = () => {
           Comprehensive Solutions for Discerning Owners & Developers
         </h1>
       </div>
-      <div className="xl:grid xl:grid-cols-2 gap-10">
-        <div className=" xl:rounded-xl xl:shadow-xl w-full max-w-[380px] xl:px-5 xl:py-5">
-          <h3 className="text-[#0F2917] xl:text-xl font-semibold max-xl:font-bold max-xl:mb-2">
+      <div className="xl:grid xl:grid-cols-2 gap-10 ">
+        <div className="xl:rounded-xl xl:shadow-xl w-full max-w-[430px] xl:px-5 xl:py-5">
+          <h3 className="text-[#0F2917] xl:text-xl font-semibold max-xl:font-bold xl:mb-2">
             {headings[0]}
           </h3>
           <p className="text-md text-[#3F5445] leading-6.5 xl:tracking-wider max-xl:leading-6.5 max-xl:w-[380px]">
             {services[0]}
           </p>
         </div>
-        <div className=" xl:rounded-xl xl:shadow-xl w-full max-w-[450px] xl:p-5 max-xl:mt-3">
+        <div className=" xl:rounded-xl xl:shadow-xl w-full max-w-[450px] xl:p-5 max-xl:mt-3 xl:border-[#0F2917]">
           <h3 className="text-[#0F2917] xl:text-xl font-semibold max-xl:font-bold max-xl:mb-2">
             {headings[1]}
           </h3>
