@@ -1,8 +1,9 @@
 import img3 from "../assets/image3.jpg";
-import img4 from "../assets/image4.jpg";
+import img4 from "../assets/image4.JPG"
 import { IoIosArrowForward } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+
 
 const Projects = () => {
   const navigate = useNavigate();
