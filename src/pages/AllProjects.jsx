@@ -7,23 +7,24 @@ const AllProjects = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [error, setError] = useState(null);
 
   const baseURL = import.meta.env.VITE_API_BASE_URL;
-
-
-
 
   useEffect(() => {
     const fetchProjects = async () => {
       try {
         const res = await axios.get(`${baseURL}/project`);
         setProjects(res.data);
-      } catch (error) {
-        console.log("Error fetching projects", error);
+      } catch {
+        setError("Something went wrong while fetching Projects");
       }
     };
     fetchProjects();
   }, [baseURL]);
+  if (error) {
+    return <p>{error}</p>;
+  }
   const openModal = (project) => {
     setModalOpen(true);
     setSelectedProject(project);

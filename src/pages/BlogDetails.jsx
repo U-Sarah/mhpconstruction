@@ -5,20 +5,28 @@ import axios from "axios";
 const BlogDetails = () => {
   const { id } = useParams();
   const [blog, setBlog] = useState(null);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchBlog = async () => {
       try {
-        const res = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/blog/${id}`);
+        const res = await axios.get(
+          `${import.meta.env.VITE_API_BASE_URL}/blog/${id}`
+        );
         setBlog(res.data);
-      } catch (error) {
-        console.log("Error in fetching blog deatils", error);
+      } catch {
+        // console.log("Error in fetching blog deatils", error);
+        setError("Something went wrong while fetching blogs");
       }
     };
     fetchBlog();
   }, [id]);
+
   if (!blog) {
     return <p>Loading....</p>;
+  }
+  if (error) {
+    return <p>{error}</p>;
   }
   return (
     <section>
