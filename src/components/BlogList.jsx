@@ -16,7 +16,8 @@ const BlogList = () => {
         console.log("Fetched blogs:", response.data);
 
         setBlogs(response.data);
-      } catch {
+      } catch(err) {
+        console.err("Error fetching blogs", err)
         setError("Something went wrong while fetching blogs");
       }
     };

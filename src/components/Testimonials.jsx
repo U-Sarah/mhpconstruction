@@ -1,13 +1,41 @@
 import { useRef } from "react";
-import image from "../assets/john.jpg";
+
 import { motion } from "framer-motion";
 
 const Testimonials = () => {
   const reviews = [
-    "MHP delivered exactly what they promised on time, with great quality. The result was beyond our expectations. we're already planning our next project with them.",
-    "MHP delivered exactly what they promised on time, with great quality. The result was beyond our expectations. we're already planning our next project with them.",
-    "MHP delivered exactly what they promised on time, with great quality. The result was beyond our expectations. we're already planning our next project with them.",
-    "MHP delivered exactly what they promised on time, with great quality. The result was beyond our expectations. we're already planning our next project with them.",
+    {
+      name: "Stephanie Okoro",
+      role: "Architect",
+      image:
+        "https://images.pexels.com/photos/7552059/pexels-photo-7552059.jpeg?auto=compress&cs=tinysrgb&w=600",
+      message:
+        "MHP Construction brought our dream project to life. Their team was professional, efficient, and easy to work with. We were impressed with the quality and timely delivery",
+    },
+    {
+      name: "Peter Lawson",
+      role: "Software Engineer",
+      image:
+        "https://images.pexels.com/photos/6584748/pexels-photo-6584748.jpeg?auto=compress&cs=tinysrgb&w=600",
+      message:
+        "From the first consultation to project completion, everything was seamless. The crew paid close attention to every detail. I'd confidently recommend them to anyone.",
+    },
+    {
+      name: "Chinwe Nwosu",
+      role: "Company",
+      image:
+        "https://images.unsplash.com/photo-1644152993066-9b9ee687930d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fGElMjBuaWdlcmlhbiUyMHdvbWFufGVufDB8fDB8fHww",
+      message:
+        "The professionalism and craftsmanship were outstanding. MHP kept us informed every step of the way. Our home looks amazing now!",
+    },
+    {
+      name: "David Okoro",
+      role: "HomeOwner",
+      image:
+        "https://images.pexels.com/photos/12666764/pexels-photo-12666764.png?auto=compress&cs=tinysrgb&w=600",
+      message:
+        "We had a great experience working with MHP Construction. They communicated clearly throughout the process and stayed within budget. The final result was even better than we expected.",
+    },
   ];
 
   const scrollRef = useRef(null);
@@ -20,7 +48,7 @@ const Testimonials = () => {
 
   return (
     <motion.section
-    id="testimonials"
+      id="testimonials"
       className="xl:p-26 mt-20 max-xl:p-3"
       initial={{ y: 100, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
@@ -46,12 +74,16 @@ const Testimonials = () => {
                 backgroundColor: i % 2 === 0 ? "#0F2917" : "#668670", // alternating bg colors
               }}
             >
-              <p>{review}</p>
+              <p className="leading-6">{review.message}</p>
               <div className="flex gap-2 mt-24">
-                <img src={image} alt="" className="rounded-full w-10 h-10" />
+                <img
+                  src={review.image}
+                  alt={review.name}
+                  className="rounded-full w-10 h-10"
+                />
                 <section>
-                  <p>Jane Doe</p>
-                  <p>Company</p>
+                  <p>{review.name}</p>
+                  <p>{review.role}</p>
                 </section>
               </div>
             </div>
