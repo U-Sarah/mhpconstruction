@@ -2,12 +2,17 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Modal from "../components/Modal.jsx";
 
+
+const skeletonCard = () => (
+  <div className="bg-gray-300 animate-pulse w-[250px] h-[250px] rounded-xl shadow-md"/>
+)
 const AllProjects = () => {
   const [projects, setProjects] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true)
 
   const baseURL = import.meta.env.VITE_API_BASE_URL;
 
@@ -19,6 +24,8 @@ const AllProjects = () => {
       } catch (err) {
         console.error("Error fetching projects", err);
         setError("Something went wrong while fetching Projects");
+      }finally {
+        setLoading(false)
       }
     };
     fetchProjects();
@@ -57,6 +64,11 @@ const AllProjects = () => {
           Your Vision. Our Execution. Exceptional Results.
         </h1>
       </div>
+      {
+        loading ? (
+          
+        )
+      }
       <section className="flex max-xl:flex-col  xl:gap-10 max-xl:gap-10 justify-center items-center mt-4">
         {projects.map((project) => (
           <div

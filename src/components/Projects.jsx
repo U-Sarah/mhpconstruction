@@ -53,7 +53,7 @@ const Projects = () => {
       {/* <button className=""> */}
 
       <p
-        className="flex bg-white gap-2 border px-2 py-1 rounded-xl mt-4 w-[150px] text-[#0F2917]"
+        className="flex bg-white gap-2 border px-2 py-1 rounded-xl mt-4 w-[150px] text-[#0F2917] cursor-pointer"
         onClick={handleClick}
       >
         View Projects
