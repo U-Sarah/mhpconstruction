@@ -14,8 +14,8 @@ const BlogDetails = () => {
           `${import.meta.env.VITE_API_BASE_URL}/blog/${id}`
         );
         setBlog(res.data);
-      } catch {
-        // console.log("Error in fetching blog deatils", error);
+      } catch(err) {
+        console.error("Error fetching blogs", err)
         setError("Something went wrong while fetching blogs");
       }
     };

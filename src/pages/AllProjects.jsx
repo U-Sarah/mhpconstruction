@@ -3,8 +3,8 @@ import axios from "axios";
 import Modal from "../components/Modal.jsx";
 
 
-const skeletonCard = () => (
-  <div className="bg-gray-300 animate-pulse w-[250px] h-[250px] rounded-xl shadow-md"/>
+const SkeletonCard = () => (
+  <div className="bg-gray-300 animate-pulse w-96 h-64 rounded-xl shadow-md"/>
 )
 const AllProjects = () => {
   const [projects, setProjects] = useState([]);
@@ -66,10 +66,14 @@ const AllProjects = () => {
       </div>
       {
         loading ? (
+          <div className="flex flex-wrap gap-6 justify-center">
+            {Array.from({length: 3}).map((_, index) => (
+              <SkeletonCard key={index}/>
+            ))}
+          </div>
           
-        )
-      }
-      <section className="flex max-xl:flex-col  xl:gap-10 max-xl:gap-10 justify-center items-center mt-4">
+        ): (
+          <section className="flex max-xl:flex-col  xl:gap-10 max-xl:gap-10 justify-center items-center mt-4">
         {projects.map((project) => (
           <div
             key={project._id}
@@ -87,6 +91,9 @@ const AllProjects = () => {
           </div>
         ))}
       </section>
+        )
+      }
+      
       {modalOpen && (
         <Modal
           project={selectedProject}
