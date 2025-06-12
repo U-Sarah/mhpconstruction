@@ -5,20 +5,26 @@ import { motion } from "framer-motion";
 
 const BlogList = () => {
   const [blogs, setBlogs] = useState([]);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/blog`);
+        const response = await axios.get(
+          `${import.meta.env.VITE_API_BASE_URL}/blog`
+        );
         console.log("Fetched blogs:", response.data);
 
         setBlogs(response.data);
-      } catch (error) {
-        console.log("Error fetching blogs", error);
+      } catch {
+        setError("Something went wrong while fetching blogs");
       }
     };
     fetchBlogs();
   }, []);
+  if (error) {
+    return <p>{error}</p>;
+  }
 
   return (
     <section
