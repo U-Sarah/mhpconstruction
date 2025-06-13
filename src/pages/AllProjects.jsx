@@ -2,17 +2,16 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Modal from "../components/Modal.jsx";
 
-
 const SkeletonCard = () => (
-  <div className="bg-gray-300 animate-pulse w-96 h-64 rounded-xl shadow-md"/>
-)
+  <div className="bg-gray-300 animate-pulse w-96 h-64 rounded-xl shadow-md" />
+);
 const AllProjects = () => {
   const [projects, setProjects] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(true);
 
   const baseURL = import.meta.env.VITE_API_BASE_URL;
 
@@ -24,8 +23,8 @@ const AllProjects = () => {
       } catch (err) {
         console.error("Error fetching projects", err);
         setError("Something went wrong while fetching Projects");
-      }finally {
-        setLoading(false)
+      } finally {
+        setLoading(false);
       }
     };
     fetchProjects();
@@ -64,36 +63,33 @@ const AllProjects = () => {
           Your Vision. Our Execution. Exceptional Results.
         </h1>
       </div>
-      {
-        loading ? (
-          <div className="flex flex-wrap gap-6 justify-center">
-            {Array.from({length: 3}).map((_, index) => (
-              <SkeletonCard key={index}/>
-            ))}
-          </div>
-          
-        ): (
-          <section className="flex max-xl:flex-col  xl:gap-10 max-xl:gap-10 justify-center items-center mt-4">
-        {projects.map((project) => (
-          <div
-            key={project._id}
-            onClick={() => openModal(project)}
-            className="cursor-pointer"
-          >
-            <img
-              src={`${baseURL}/${project.coverImage}`}
-              alt={project.name}
-              className="w-96 h-64 object-cover rounded-xl max-xl:w-90"
-            />
-            <p className="max-xl:text-md xl:text-xl font-semibold mt-2 text-[#0F2917]">
-              {project.name}
-            </p>
-          </div>
-        ))}
-      </section>
-        )
-      }
-      
+      {loading ? (
+        <div className="flex flex-wrap gap-6 justify-center">
+          {Array.from({ length: 3 }).map((_, index) => (
+            <SkeletonCard key={index} />
+          ))}
+        </div>
+      ) : (
+        <section className="flex max-xl:flex-col  xl:gap-10 max-xl:gap-10 justify-center items-center mt-4">
+          {projects.map((project) => (
+            <div
+              key={project._id}
+              onClick={() => openModal(project)}
+              className="cursor-pointer"
+            >
+              <img
+                src={`${baseURL}/${project.coverImage}`}
+                alt={project.name}
+                className="w-96 h-64 object-cover rounded-xl max-xl:w-90"
+              />
+              <p className="max-xl:text-md xl:text-xl font-semibold mt-2 text-[#0F2917]">
+                {project.name}
+              </p>
+            </div>
+          ))}
+        </section>
+      )}
+
       {modalOpen && (
         <Modal
           project={selectedProject}
