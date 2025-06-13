@@ -18,7 +18,7 @@ const Projects = () => {
       <h1 className="text-xl xl:text-4xl mb-10 max-w-full xl:max-w-[1200px] xl:text-center text-left leading-snug  text-[#0F2917] font-semibold">
         We engineer more than structures, we create enduring assets.{" "}
       </h1>
-      <div className="flex gap-3 overflow-hidden">
+      <div className="flex gap-3">
         <motion.img
           src={img3}
           alt=""
@@ -34,7 +34,6 @@ const Projects = () => {
           alt=""
           width={700}
           className="rounded-xl overflow-hidden max-xl:w-[184px]"
-    
           initial={{ x: 100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
