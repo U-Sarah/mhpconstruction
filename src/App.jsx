@@ -10,7 +10,7 @@ const App = () => {
   return (
     <div className="bg-white overflow-x-hidden">
       {/* Mobile layout with background image */}
-      <div className="xl:hidden relative bg-[url('/src/assets/image1.jpg')] bg-cover bg-center">
+      <div className="xl:hidden relative bg-[url('/src/assets/image1.JPG')] bg-cover bg-center">
         <div className="absolute inset-0 bg-black/40 z-0" />
         <div className="relative z-10">
           <NavBar isHome={true} />
