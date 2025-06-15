@@ -16,48 +16,48 @@ const Services = () => {
   return (
     <motion.section
       id="services"
-      className="flex xl:justify-between max-xl:flex-col xl:p-30 max-xl:p-3 mt-30 "
+      className="lg:flex xl:justify-between  xl:p-30 max-xl:p-3 mt-30 "
       initial={{ y: 100, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: true, amount: 0.3 }}
     >
-      <div>
-        <p className="text-[#B4A734] mb-2 text-md">Our Services</p>
-        <h1 className="w-full max-w-[600px] xl:text-5xl max-xl:text-xl font-semibold  text-[#0F2917] max-xl:mb-6">
+      <div className="md:max-lg:text-center xl:text-left md:max-lg:mb-10">
+        <p className=" text-[#B4A734] mb-2 text-md md:max-lg:text-lg">Our Services</p>
+        <h1 className="w-full max-w-[600px] xl:text-5xl max-xl:text-xl md:text-4xl lg:text-5xl font-semibold  text-[#0F2917] max-xl:mb-6 md:max-lg:mx-auto xl:mx-0">
           Comprehensive Solutions for Discerning Owners & Developers
         </h1>
       </div>
-      <div className="xl:grid xl:grid-cols-2 gap-10 ">
-        <div className="xl:rounded-xl xl:shadow-xl w-full max-w-[430px] xl:px-5 xl:py-5">
-          <h3 className="text-[#0F2917] xl:text-xl font-semibold max-xl:font-bold xl:mb-2">
+      <div className="xl:grid xl:grid-cols-2 md:max-lg:grid md:max-lg:grid-cols-2 md:max-lg:justify-center md:max-lg:mx-auto md:max-lg:max-w-4xl gap-10 ">
+        <div className="xl:rounded-xl md:max-lg:rounded-xl xl:shadow-xl md:max-lg:shadow-xl w-full max-w-[430px] xl:px-5 xl:py-5 md:max-lg:px-5 md:max-lg:py-5">
+          <h3 className="text-[#0F2917] xl:text-xl md:max-lg:text-xl font-semibold max-xl:font-bold xl:mb-2 md:max-lg:mb-2">
             {headings[0]}
           </h3>
-          <p className="text-md text-[#3F5445] leading-6.5 xl:tracking-wider max-xl:leading-6.5 max-xl:w-[380px]">
+          <p className="text-md md:max-lg:text-base  text-[#3F5445] leading-6.5 xl:tracking-wider max-xl:leading-6.5 max-xl:w-[380px] md:max-lg:w-full">
             {services[0]}
           </p>
         </div>
-        <div className=" xl:rounded-xl xl:shadow-xl w-full max-w-[450px] xl:p-5 max-xl:mt-3 xl:border-[#0F2917]">
-          <h3 className="text-[#0F2917] xl:text-xl font-semibold max-xl:font-bold max-xl:mb-2">
+        <div className=" xl:rounded-xl md:max-lg:rounded-xl xl:shadow-xl md:max-lg:shadow-xl w-full max-w-[450px] xl:p-5 md:max-lg:p-5 max-xl:mt-3 md:max-lg:mt-0  xl:border-[#0F2917]">
+          <h3 className="text-[#0F2917] xl:text-xl md:max-lg:text-xl font-semibold max-xl:font-bold max-xl:mb-2 md:max-lg:mb-2">
             {headings[1]}
           </h3>
-          <p className="text-md text-[#3F5445] leading-6.5 xl:tracking-wider xl:w-[330px] max-xl:w-[380px]">
+          <p className="text-md md:max-lg:text-base text-[#3F5445] leading-6.5 xl:tracking-wider xl:w-[330px] max-xl:w-[380px] md:max-lg:w-full">
             {services[1]}
           </p>
         </div>
-        <div className=" xl:rounded-xl xl:shadow-xl w-full max-w-[400px] xl:px-5 xl:py-5">
-          <h3 className="text-[#0F2917] xl:text-xl font-semibold max-xl:font-bold max-xl:mb-2 max-xl:mt-3">
+        <div className=" xl:rounded-xl md:max-lg:rounded-xl md:max-lg:shadow-xl xl:shadow-xl w-full max-w-[400px] xl:px-5 md:max-lg:px-5 xl:py-5 md:max-lg:py-5">
+          <h3 className="text-[#0F2917] xl:text-xl md:max-lg:text-xl font-semibold max-xl:font-bold max-xl:mb-2 max-xl:mt-3 md:max-lg:mb-2 md:max-lg:mt-0">
             {headings[2]}
           </h3>
-          <p className="text-md text-[#3F5445] xl:tracking-wider leading-6.5 xl:w-[330px]">
+          <p className="text-md md:max-lg:text-base text-[#3F5445] xl:tracking-wider leading-6.5 xl:w-[330px] md:max-lg:w-full">
             {services[2]}
           </p>
         </div>
-        <div className=" xl:rounded-xl xl:shadow-xl w-full max-w-[400px] xl:px-5 xl:py-5">
-          <h3 className="text-[#0F2917] xl:text-xl font-semibold max-xl:font-bold max-xl:mb-2 max-xl:mt-3">
+        <div className=" xl:rounded-xl md:max-lg:rounded-xl xl:shadow-xl md:max-lg:shadow-xl w-full max-w-[400px] xl:px-5 md:max-lg:px-5 xl:py-5 md:max-lg:py-5">
+          <h3 className="text-[#0F2917] xl:text-xl md:max-lg:text-xl font-semibold max-xl:font-bold max-xl:mb-2 max-xl:mt-3 md:max-lg:mb-2 md:max-lg:mt-0">
             {headings[3]}
           </h3>
-          <p className="text-md text-[#3F5445] xl:tracking-wider leading-6.5 xl:w-[330px]">
+          <p className="text-md md:max-lg:text-base text-[#3F5445] xl:tracking-wider leading-6.5 xl:w-[330px] md:max-lg:w-full">
             {services[3]}
           </p>
         </div>

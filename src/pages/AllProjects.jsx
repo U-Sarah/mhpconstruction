@@ -20,6 +20,7 @@ const AllProjects = () => {
       try {
         const res = await axios.get(`${baseURL}/project`);
         setProjects(res.data);
+        console.log(res.data)
       } catch (err) {
         console.error("Error fetching projects", err);
         setError("Something went wrong while fetching Projects");

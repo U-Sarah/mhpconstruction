@@ -35,11 +35,11 @@ const About = () => {
       <h1 className="text-[#B4A734] text-2xl font-semibold xl:mt-5 xl:mb-5 max-xl:mt-7">
         About Us
       </h1>
-      <div className="text-[#0F2917] text-md xl:w-[700px]">
+      <div className="text-[#0F2917] text-md  xl:w-[700px]">
         {aboutTexts.map((text, idx) => (
           <p
             key={idx}
-            className="xl:p-3 xl:text-lg max-xl:p-3.5 max-xl:text-sm tracking-wide"
+            className="xl:p-3 xl:text-lg max-xl:p-3.5 max-xl:text-sm tracking-wider"
           >
             {text}
           </p>

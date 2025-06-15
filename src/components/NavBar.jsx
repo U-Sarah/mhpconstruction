@@ -94,7 +94,7 @@ const NavBar = () => {
         </>
       ) : (
         <>
-          <ul className="flex gap-5 text-[#0F2917] font-semibold">
+          <ul className="flex gap-5 max-xl:text-[#0F2917] md:max-lg:text-white font-semibold">
             {isHome ? (
               <>
                 <li>

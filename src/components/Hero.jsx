@@ -50,12 +50,12 @@ const Hero = () => {
 
   // Desktop view
   return (
-    <div className="flex justify-between px-32 py-20 mt-30">
-      <div className="mt-30">
-        <h1 className="text-7xl w-full max-w-[800px]  font-semibold bg-gradient-to-t from-[#0F2917] via-[#B4A734] to-[#B4A734] text-transparent bg-clip-text xl:mb-5">
+    <div className="flex justify-between xl:px-32 md:max-lg:px-20 xl:py-20 md:max-lg:py-15 xl:mt-30 md:max-lg:mt-20">
+      <div className="mt-30 md:max-lg:mt-15">
+        <h1 className="text-7xl w-full max-w-[800px]  font-semibold  bg-gradient-to-t from-[#0F2917] via-[#B4A734] to-[#B4A734] text-transparent bg-clip-text xl:mb-5">
           Welcome to MHP, Building Excellence And Sustaining Value
         </h1>
-        <p className="text-[#3F5445] w-full max-w-[750px] tracking-wider leading-6 mt-3 text-lg">
+        <p className="text-white lg:text-[#3F5445] w-full max-w-[750px] tracking-wider leading-6 mt-3 text-lg">
           Redefining real estate through visionary construction & intelligent
           management, where architectural ambition meets executional excellence.
         </p>
@@ -64,7 +64,7 @@ const Hero = () => {
           <a href="https://wa.me/2349036965601">Secure your space</a>
         </button>
       </div>
-      <div className="overflow-hidden">
+      <div className="overflow-hidden hidden lg:flex">
         <img
           src={images[currentImage]}
           alt="Hero"

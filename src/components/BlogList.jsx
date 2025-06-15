@@ -13,7 +13,7 @@ const BlogList = () => {
         const response = await axios.get(
           `${import.meta.env.VITE_API_BASE_URL}/blog`
         );
-        console.log("Fetched blogs:", response.data);
+        // console.log("Fetched blogs:", response.data);
 
         setBlogs(response.data);
       } catch(err) {
@@ -32,9 +32,9 @@ const BlogList = () => {
       id="blogs"
       className="xl:py-30 xl:px-26 xl:mt-20 max-xl:p-3 max-xl:mt-24 max-xl:mb-14"
     >
-      <div className="xl:text-center">
-        <p className="text-[#B4A734]">Popular Blogs</p>
-        <h1 className="xl:text-4xl xl:mb-10 text-[#0F2917]">
+      <div className="xl:text-center md:max-lg:text-center">
+        <p className="text-[#B4A734] md:max-lg:text-lg">Popular Blogs</p>
+        <h1 className="xl:text-4xl max-xl:text-xl max-xl:text-center md:max-lg:text-2xl font-semibold xl:mb-10 text-[#0F2917]">
           Thoughts, trends and stories shaping the built world
         </h1>
       </div>

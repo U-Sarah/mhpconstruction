@@ -86,9 +86,9 @@ const Footer = () => {
             </div>
           ) : (
             // desktop view
-            <div className="mt-10 p-4">
+            <div className="mt-10  p-4">
               <hr className="border-[#3F5445]" />
-              <div className="xl:flex xl:justify-between xl:mt-4 xl:px-3 ">
+              <div className="xl:flex md:max-lg:flex xl:justify-between md:max-lg:justify-between xl:mt-4 md:max-lg:mt-4 xl:px-3 ">
                 <img
                   src={logo}
                   alt=""
