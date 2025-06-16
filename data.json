@@ -1,0 +1,42 @@
+{
+  "projects": [
+    {
+      "projectName": "Fagba Residence",
+      "coverImage": "/assets/Fagba-Residence/cover-image.jpg",
+      "images": [
+        "/assets/Fagba-Residence/progress.jpg",
+        "/assets/Fagba-Residence/progress-1.jpg",
+        "/assets/Fagba-Residence/progress-2.jpg",
+        "/assets/Fagba-Residence/completed.jpg",
+        "/assets/Fagba-Residence/interior.jpg",
+        "/assets/Fagba-Residence/completed-1.jpg",
+        "/assets/Fagba-Residence/completed-3.jpg"
+      ]
+    },
+    {
+      "projectName": "Koka Residence",
+      "coverImage": "/assets/Koka-Residence/cover-image.jpg",
+      "images": [
+        "/assets/Koka-Residence/progress-1.jpg",
+        "/assets/Koka-Residence/progress-2.jpg",
+        "/assets/Koka-Residence/progress-3.jpg",
+        "/assets/Koka-Residence/progress-4.jpg",
+        "/assets/Koka-Residence/completed.jpg"
+      ]
+    },
+    {
+      "projectName": "Anivi Residence",
+      "coverImage": "/assets/Anivi-Residence/cover-image.jpg",
+      "images": [
+        "/assets/Anivi-Residence/start.jpg",
+        "/assets/Anivi-Residence/progress.jpg",
+        "/assets/Anivi-Residence/progress-1.jpg",
+        "/assets/Anivi-Residence/progress-2.jpg",
+        "/assets/Anivi-Residence/progress-3.jpg",
+        "/assets/Anivi-Residence/progress-4.jpg",
+        "/assets/Anivi-Residence/progress-5.jpg",
+        "/assets/Anivi-Residence/progress-6.jpg"
+      ]
+    }
+  ]
+}

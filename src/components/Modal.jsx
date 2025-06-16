@@ -8,7 +8,7 @@ const Modal = ({
   onClose,
   nextSlide,
   prevSlide,
-  baseURL,
+ 
 }) => {
   if (!project) return null;
   return (
@@ -25,7 +25,7 @@ const Modal = ({
         </h3>
         <div className="relative">
           <img
-            src={`${baseURL}/${project.gallery[currentSlide]}`}
+            src={project.gallery[currentSlide]}
             alt="Slide"
             className="w-64 h-64 object-cover rounded-md flex flex-col justify-center items-center mx-auto"
           />

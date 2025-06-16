@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
 import Modal from "../components/Modal.jsx";
+
 
 const SkeletonCard = () => (
   <div className="bg-gray-300 animate-pulse w-96 h-64 rounded-xl shadow-md" />
 );
+
 const AllProjects = () => {
   const [projects, setProjects] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);
@@ -13,23 +14,34 @@ const AllProjects = () => {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  const baseURL = import.meta.env.VITE_API_BASE_URL;
-
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const res = await axios.get(`${baseURL}/project`);
-        setProjects(res.data);
-        console.log(res.data)
+        const response = await fetch("./data.json");
+        if (!response.ok) {
+          throw new Error("Failed to fetch projects data");
+        }
+        const data = await response.json();
+        const changedProjects = data.projects.map((project, index) => ({
+          // changing the data to match the format in the json file
+          _id: `project_${index + 1}`,
+          name: project.projectName,
+          coverImage: project.coverImage,
+          gallery: project.images,
+        }));
+
+        setProjects(changedProjects);
+        console.log(changedProjects);
       } catch (err) {
         console.error("Error fetching projects", err);
-        setError("Something went wrong while fetching Projects");
+        setError("Something went wrong while fetching projects");
       } finally {
         setLoading(false);
       }
     };
     fetchProjects();
-  }, [baseURL]);
+  }, []);
+
   if (error) {
     return <p>{error}</p>;
   }
@@ -78,17 +90,21 @@ const AllProjects = () => {
               onClick={() => openModal(project)}
               className="cursor-pointer"
             >
+              
               <img
-                src={`${baseURL}/${project.coverImage}`}
+              // import image with string path
+                src={(project.coverImage)}
                 alt={project.name}
                 className="w-96 h-64 object-cover rounded-xl max-xl:w-90"
               />
               <p className="max-xl:text-md xl:text-xl font-semibold mt-2 text-[#0F2917]">
                 {project.name}
               </p>
+              
             </div>
           ))}
         </section>
+      
       )}
 
       {modalOpen && (
@@ -98,7 +114,6 @@ const AllProjects = () => {
           currentSlide={currentSlide}
           nextSlide={nextSlide}
           prevSlide={prevSlide}
-          baseURL={baseURL}
         />
       )}
     </section>
