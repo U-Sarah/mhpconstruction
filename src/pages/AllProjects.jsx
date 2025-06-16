@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Modal from "../components/Modal.jsx";
-
+// import projectData from "./data.json";
 
 const SkeletonCard = () => (
   <div className="bg-gray-300 animate-pulse w-96 h-64 rounded-xl shadow-md" />
@@ -17,7 +17,7 @@ const AllProjects = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await fetch("./data.json");
+        const response = await fetch("/data.json");
         if (!response.ok) {
           throw new Error("Failed to fetch projects data");
         }
@@ -90,21 +90,18 @@ const AllProjects = () => {
               onClick={() => openModal(project)}
               className="cursor-pointer"
             >
-              
               <img
-              // import image with string path
-                src={(project.coverImage)}
+                // import image with string path
+                src={project.coverImage}
                 alt={project.name}
                 className="w-96 h-64 object-cover rounded-xl max-xl:w-90"
               />
               <p className="max-xl:text-md xl:text-xl font-semibold mt-2 text-[#0F2917]">
                 {project.name}
               </p>
-              
             </div>
           ))}
         </section>
-      
       )}
 
       {modalOpen && (
