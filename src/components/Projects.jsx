@@ -1,15 +1,11 @@
 import img3 from "../assets/image3.JPG";
 import img4 from "../assets/image4.JPG";
 import { IoIosArrowForward } from "react-icons/io";
-// import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 
 const Projects = () => {
-  // const navigate = useNavigate();
-  // const handleClick = () => {
-  //   navigate("/projects");
-  // };
   return (
     <section
       id="project"

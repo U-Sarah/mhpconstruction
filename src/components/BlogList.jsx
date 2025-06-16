@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import BlogCard from "./BlogCard.jsx";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 
 const BlogList = () => {
