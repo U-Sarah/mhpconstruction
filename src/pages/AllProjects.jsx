@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Modal from "../components/Modal.jsx";
+
 // import projectData from "./data.json";
 
 const SkeletonCard = () => (
@@ -96,9 +97,17 @@ const AllProjects = () => {
                 alt={project.name}
                 className="w-96 h-64 object-cover rounded-xl max-xl:w-90"
               />
-              <p className="max-xl:text-md xl:text-xl font-semibold mt-2 text-[#0F2917]">
-                {project.name}
-              </p>
+              <div className="flex justify-between">
+                <p className="max-xl:text-md xl:text-xl font-semibold mt-2 text-[#0F2917]">
+                  {project.name}
+                </p>
+                <p
+                  className="text-sm xl:font-semibold max-xl:mt-2 xl:mt-3 text-[#0F2917] bg-gray-200 px-1 py-1 rounded-2xl"
+                  onClick={() => openModal(project)}
+                >
+                  Click to view progress
+                </p>
+              </div>
             </div>
           ))}
         </section>
