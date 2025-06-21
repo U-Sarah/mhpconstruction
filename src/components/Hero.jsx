@@ -31,7 +31,7 @@ const Hero = () => {
   if (isMobile) {
     return (
       <div
-        className="h-[100vh]  flex flex-col justify-center px-6 text-white text-shadow-sm transition-all duration-1000"
+        className="h-[100vh]  flex flex-col justify-center px-4 text-white text-shadow-sm transition-all duration-1000"
         
       >
         <div className="flex flex-col  gap-4">
@@ -43,7 +43,7 @@ const Hero = () => {
           <h3 className="text-white mt-3 font-semibold ">
             A proud subsidiary of Midhousepro Limited
           </h3>
-          <p className="mt-4 w-full max-w-[300px]">
+          <p className="mt-4 w-full max-w-[350px]">
             At MHP Construction, we bring your dream home to life — beautifully
             and affordably. With over a decade of industry experience, we
             specialize in crafting exceptional spaces that reflect your vision
