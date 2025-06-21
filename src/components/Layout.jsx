@@ -1,4 +1,4 @@
-
+import Load from "./Load.jsx"
 import { useLocation } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 import Footer from "./Footer";
@@ -9,6 +9,8 @@ const Layout = () => {
   const isHome = location.pathname === "/";
 
   return (
+    <Load>
+
     <div className="relative bg-white overflow-x-hidden">
       {!isHome && <NavBar isHome={isHome} />}
       <main>
@@ -16,6 +18,7 @@ const Layout = () => {
       </main>
       <Footer />
     </div>
+    </Load>
   );
 };
 

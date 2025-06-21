@@ -1,5 +1,8 @@
 @import "tailwindcss";
-
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 
 
 html{
@@ -40,5 +43,4 @@ button {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-
 

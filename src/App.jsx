@@ -10,6 +10,7 @@ import img2 from "./assets/image2.JPG";
 import img3 from "./assets/image3.JPG";
 import img4 from "./assets/image4.JPG";
 import img5 from "./assets/image5.JPG";
+import Load from "./components/Load";
 
 const images = [img1, img2, img3, img4, img5];
 const App = () => {
@@ -21,6 +22,9 @@ const App = () => {
     return () => clearInterval(interval);
   }, []);
   return (
+    // <Load>
+
+    
     <div className="bg-white overflow-x-hidden">
       {/* Mobile layout with background image */}
       <div
@@ -45,6 +49,7 @@ const App = () => {
       <Testimonials />
       <BlogList />
     </div>
+    // {/* </Load> */}
   );
 };
 
