@@ -43,7 +43,7 @@ const Hero = () => {
           <h3 className="text-white mt-3 font-semibold ">
             A proud subsidiary of Midhousepro Limited
           </h3>
-          <p className="mt-4 w-[350px]">
+          <p className="mt-4 w-full max-w-[300px]">
             At MHP Construction, we bring your dream home to life — beautifully
             and affordably. With over a decade of industry experience, we
             specialize in crafting exceptional spaces that reflect your vision
