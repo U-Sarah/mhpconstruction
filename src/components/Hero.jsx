@@ -30,20 +30,33 @@ const Hero = () => {
   // Mobile view
   if (isMobile) {
     return (
-      <div className="h-[100vh] bg-cover bg-center flex flex-col justify-center px-6 text-white text-shadow-sm">
-        <h2 className="text-4xl w-[380px]  font-semibold text-white leading-10">
-          Welcome to MHP,{" "}
-          <span className="text-[#B4A734]">Building Excellence,</span> And
-          Sustaining Value
-        </h2>
-        <p className="mt-4 w-[380px]">
-          Driven by integrity, defined by design. We deliver sustainable,
-          precision-built spaces with unwavering commitment and transparency.
-        </p>
-        <button className="flex items-center gap-2 bg-[#13351D] text-white px-3 py-2 rounded-xl mt-6 hover:bg-[#BBC7BD] hover:text-[#0F2917] w-[150px]">
-          <FiPhone />
-          <a href="https://wa.me/2349036965601">Contact Us</a>
-        </button>
+      // {/* <div className="absolute inset-0 bg-black bg-opacity-40 z-0"></div> */}
+      <div
+        className="h-[100vh]  flex flex-col justify-center px-6 text-white text-shadow-sm transition-all duration-1000"
+        
+      >
+        <div className="flex flex-col  gap-4">
+          <h2 className="text-4xl w-[380px]  font-semibold text-white leading-10">
+            Welcome to MHP Construction Limited.{" "}
+            <span className="text-[#B4A734]">Building Excellence,</span> And
+            Sustaining Value
+          </h2>
+          <h3 className="text-white mt-3 font-semibold ">
+            A proud subsidiary of Midhousepro Limited
+          </h3>
+          <p className="mt-4 w-[450px]">
+            At MHP Construction, we bring your dream home to life — beautifully
+            and affordably. With over a decade of industry experience, we
+            specialize in crafting exceptional spaces that reflect your vision
+            while staying within your budget. Our friendly, customer-focused
+            team makes us your go-to partner for all your home construction and
+            interior design needs.
+          </p>
+          <button className="flex items-center gap-2 bg-[#13351D] text-white px-3 py-2 rounded-xl mt-6 hover:bg-[#BBC7BD] hover:text-[#0F2917] w-[150px]">
+            <FiPhone />
+            <a href="https://wa.me/2349036965601">Contact Us</a>
+          </button>
+        </div>
       </div>
     );
   }
@@ -52,12 +65,20 @@ const Hero = () => {
   return (
     <div className="flex justify-between xl:px-32 md:max-lg:px-20 xl:py-20 md:max-lg:py-15 xl:mt-30 md:max-lg:mt-20">
       <div className="mt-30 md:max-lg:mt-15">
-        <h1 className="text-7xl w-full max-w-[800px]  font-semibold  bg-gradient-to-t from-[#0F2917] via-[#B4A734] to-[#B4A734] text-transparent bg-clip-text xl:mb-5">
-          Welcome to MHP, Building Excellence And Sustaining Value
+        <h1 className="text-6xl w-full max-w-[800px]  font-semibold  bg-gradient-to-t from-[#0F2917] via-[#B4A734] to-[#B4A734] text-transparent bg-clip-text xl:mb-5 ">
+          Welcome to MHP Construction Limited, Building Excellence And
+          Sustaining Value
         </h1>
+        <h2 className="text-[#3F5445] text-2xl font-semibold md:max-lg:text-white">
+          A proud subsidiary of Midhousepro Limited
+        </h2>
         <p className="text-white lg:text-[#3F5445] w-full max-w-[750px] tracking-wider leading-6 mt-3 text-lg">
-          Redefining real estate through visionary construction & intelligent
-          management, where architectural ambition meets executional excellence.
+          At MHP Construction, we bring your dream home to life — beautifully
+          and affordably. With over a decade of industry experience, we
+          specialize in crafting exceptional spaces that reflect your vision
+          while staying within your budget. Our friendly, customer-focused team
+          makes us your go-to partner for all your home construction and
+          interior design needs.
         </p>
         <button className="flex items-center gap-2 bg-[#13351D] text-white px-3 py-2 rounded-lg mt-3 hover:bg-[#BBC7BD] hover:text-[#0F2917]">
           <FiPhone />
