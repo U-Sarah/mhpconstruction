@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Modal from "../components/Modal.jsx";
+import {motion} from "motion/react"
 
 // import projectData from "./data.json";
 
@@ -86,10 +87,12 @@ const AllProjects = () => {
       ) : (
         <section className="flex max-xl:flex-col  xl:gap-10 max-xl:gap-10 justify-center items-center mt-4">
           {projects.map((project) => (
-            <div
+            <motion.div
               key={project._id}
               onClick={() => openModal(project)}
               className="cursor-pointer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
               <img
                 // import image with string path
@@ -108,7 +111,7 @@ const AllProjects = () => {
                   Click to view progress
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </section>
       )}

@@ -4,6 +4,8 @@ import { useLocation } from "react-router-dom";
 import { FiPhone } from "react-icons/fi";
 import { IoIosMenu, IoIosClose } from "react-icons/io";
 import { Link } from "react-router-dom";
+// eslint-disable-next-line no-unused-vars
+import {motion} from "motion/react"
 
 const NavBar = () => {
   const location = useLocation();
@@ -94,23 +96,23 @@ const NavBar = () => {
         </>
       ) : (
         <>
-          <ul className="flex gap-5 max-xl:text-[#0F2917] md:max-lg:text-white font-semibold">
+          <motion.ul className="flex gap-5 max-xl:text-[#0F2917] md:max-lg:text-white font-semibold" layoutId="und">
             {isHome ? (
               <>
                 <li>
-                  <a href="#project">Projects</a>
+                  <a href="#project" className="hover:underline">Projects</a>
                 </li>
                 <li>
-                  <a href="#services">Services</a>
+                  <a href="#services" className="hover:underline">Services</a>
                 </li>
                 <li>
-                  <a href="#testimonials">Testimonials</a>
+                  <a href="#testimonials" className="hover:underline">Testimonials</a>
                 </li>
                 <li>
-                  <Link to="/about">About us</Link>
+                  <Link to="/about" className="hover:underline">About us</Link>
                 </li>
                 <li>
-                  <a href="#blogs">Blogs</a>
+                  <a href="#blogs" className="hover:underline">Blogs</a>
                 </li>
               </>
             ) : (
@@ -123,13 +125,13 @@ const NavBar = () => {
                 </li>
               </>
             )}
-          </ul>
-          <button className="flex items-center gap-2 bg-[#13351D] text-white px-3 py-2 rounded-lg hover:bg-[#BBC7BD] hover:text-[#0F2917]">
+          </motion.ul>
+          <motion.button className="flex items-center gap-2 bg-[#13351D] text-white px-3 py-2 rounded-lg hover:bg-[#BBC7BD] hover:text-[#0F2917]" animate={{ scale: 1.05 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
             <span>
               <FiPhone />
             </span>
             <a href="https://wa.me/2349036965601">Contact Us</a>
-          </button>
+          </motion.button>
         </>
       )}
     </nav>
